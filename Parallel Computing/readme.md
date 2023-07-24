@@ -103,3 +103,11 @@ if __name__ == "__main__":
 ### Wait_Group: is a synchronization mechanism that allows multiple threads to wait for each other. In other words, a wait group lets you defer the execution of a thread until the execution of all the other threads in the wait group completes. under Condition Variable.
 
 ![](9.png)
+
+
+<br />
+
+## ___Queue vs Pipe:___ 
+
+### Pipline: function output will be the input of the next function.  and use it if we have to many functions.
+### Queue: we use it inside one function to make it faster. and use it if we have to many data.

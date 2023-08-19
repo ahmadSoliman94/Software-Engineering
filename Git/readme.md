@@ -223,3 +223,78 @@ git merge <branch name>
 --- 
 
 ![9](./images/9.jpeg)
+
+---
+
+### Stashing: 
+#### is a concept in the Git version control system, which allows you to temporarily save changes that you don't want to commit immediately. This is useful, for instance, when you're in the middle of working on something but need to switch branches. Is as a bag that you can put your changes in it and then you can work on another branch. Then you can get your changes back from the bag or delete the bag.
+
+### To stash the changes:
+```bash
+git stash save "your message"
+```
+
+
+### To list all the stashes:
+```bash
+git stash list
+```
+
+### To apply stash and delete it:
+```bash
+git stash pop
+```
+
+### To apply the stash without deleting it:
+```bash
+git stash apply <stash name>
+```
+---
+
+### Time traveling:
+#### Time traveling is a concept in the Git version control system, which allows you to go back to a previous commit. This is useful, for instance, when you want to undo a commit or go back to a previous version of your project for any reason.
+
+### Detached HEAD:
+#### Detached HEAD is a state that occurs when you checkout to a previous commit. In this state, you can not commit any changes. You can only see the changes. To get out from this state you need to checkout to a branch.
+
+![13](./images/13.png)
+
+### if you wnat to go for example to the commit 'add python' here detatched head will be created. then you can not commit any changes. you can only see the changes. to get out from this state you need to checkout to a branch.
+```bash
+git checkout <commit id>
+```
+
+### Exploring with no intention of saving changes
+```bash
+git checkout <commit id> or git checkout <branch name>
+```
+
+### Saving changes made in detached HEAD state
+```bash
+git checkout -b new_branch_name
+```
+
+### Discarding changes made in detached HEAD state
+```bash
+git checkout [branch_name]
+```
+
+```bash
+git checkout HEAD~1 # Go back 1 commit from HEAD
+git checkout HEAD~2 # Go back 2 commits from HEAD
+````
+
+```bash
+git switch - # Go back to the previous branch
+```
+
+---
+
+````bash
+git reset --hard <commit id> # Go back to a previous commit and delete all changes made after it
+````
+
+### To show the commit id in one line
+````bash	
+git log --oneline
+````

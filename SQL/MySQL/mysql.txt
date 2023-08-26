@@ -1,0 +1,19 @@
+# To run the server: 
+
+sudo docker pull mysql/mysql-server:latest
+sudo docker images
+
+sudo docker run -p 13306:3306 --name mysql-server -e MYSQL_ROOT_PASSWORD='123123123' -d mysql/mysql-server:latest
+
+sudo docker run --name=mysql-server -d mysql/mysql-server:latest
+sudo docker exec -it mysql-server bash
+
+
+
+UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='root';
+
+
+
+
+
+FLUSH PRIVILEGES;

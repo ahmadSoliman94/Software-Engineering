@@ -52,3 +52,37 @@ SELECT * FROM `table_name` WHERE `column_name` LIKE 'b%'; # LIKE: value must sta
 ```bash	
 SELECT * FROM `table_name` WHERE `column_name`  REGEXP '^[0-9]'; # REGEXP: value must be a nmber between 0 and 9 (you can use any regular expression)
 ```
+
+ ```bash
+ SELECT * FROM `table_name` ORDER BY `column_name` ASC; # ORDER BY: sort the values in ascending order
+ ```
+
+```bash
+SELECT * FROM `table_name` ORDER BY `column_name` DESC; # ORDER BY: sort the values in descending order
+```
+
+```bash
+SELECT * FROM `table_name` ORDER BY `column_name` ASC, `column_name` DESC; # ORDER BY: sort the values in ascending order and then in descending order
+```
+
+```bash
+SELECT * FROM `table_name` ORDER BY `column_name` ASC LIMIT 2,2; # LIMIT: show only 2 rows starting from the 3rd row
+```
+
+---- 
+
+### INNER JOIN: is used to combine each row from one table with every row from another table if the join condition is true.
+
+![1](images/1.png)
+
+```bash
+SELECT * FROM `table_name` t INNER JOIN `table_name` ON `table_name`.`column_name` = `table_name`.`column_name`; # INNER JOIN: combine each row from one table with every row from another table if the join condition is true., t: alias
+```
+
+
+### JOIN CONDITION: is used to combine each row from one table with every row from another table if the join condition is true.
+
+```bash
+SELECT * FROM `table_name` t INNER JOIN `table_name` ON `table_name`.`column_name` = `table_name`.`column_name`AND  `table_name`.`column_name` = `table_name`.`column_name`;  # AND: join condition
+````
+

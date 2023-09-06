@@ -13,7 +13,7 @@ sudo docker exec -it mysql-server bash
 UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='root';
 
 
-
-
-
 FLUSH PRIVILEGES;
+
+## sudo docker start -ai mysql-server  ('to start the serve')
+
